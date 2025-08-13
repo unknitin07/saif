@@ -2,216 +2,81 @@
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Trading Seekho - Best Hindi Trading Channel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading Hub Hindi</title>
   <style>
-    * { 
-      box-sizing: border-box; 
-      -webkit-tap-highlight-color: transparent;
-    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       padding: 20px;
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #0d1421, #1a2332);
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
       color: white;
       text-align: center;
-      overflow-x: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       min-height: 100vh;
-      touch-action: manipulation;
-    }
-    .main-wrapper {
-      width: 100%;
-      max-width: 550px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .testimonial-container {
-      width: 100%;
-      margin-bottom: 30px;
-      overflow: hidden;
-      position: relative;
-      height: 140px;
-    }
-    .testimonial-track {
-      display: flex;
-      width: 300%;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      animation: slideHorizontal 30s linear infinite;
-    }
-    @keyframes slideHorizontal {
-      0% { transform: translateX(0); }
-      33.33% { transform: translateX(-33.33%); }
-      66.66% { transform: translateX(-66.66%); }
-      100% { transform: translateX(0); }
-    }
-    .testimonial-item {
-      width: 95%;
-      flex-shrink: 0;
-      padding: 20px;
-      background: rgba(46, 125, 50, 0.1);
-      border-radius: 15px;
-      font-size: 18px;
-      color: #e8f5e8;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-      border: 1px solid rgba(76, 175, 80, 0.3);
-      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      line-height: 1.4;
-      margin-right: 20px;
     }
-    
-    .center-card {
+    .container {
+      max-width: 400px;
       width: 100%;
-      background: rgba(33, 150, 243, 0.1);
+    }
+    .trading { color: #00ff88; font-weight: bold; }
+    .card {
+      background: rgba(255,255,255,0.1);
       padding: 30px;
       border-radius: 20px;
-      margin-bottom: 30px;
-      border: 1px solid rgba(33, 150, 243, 0.3);
+      margin: 20px 0;
+      border: 1px solid rgba(255,255,255,0.2);
     }
-    .logo {
-      font-size: 32px;
-      font-weight: bold;
-      color: #4fc3f7;
-      margin-bottom: 10px;
-    }
-    .tagline {
-      font-size: 20px;
-      color: #b3e5fc;
-      line-height: 1.4;
-    }
-    .cta-button {
-      margin: 25px auto 20px;
-      padding: 18px 30px;
-      font-size: 22px;
-      background: linear-gradient(45deg, #2e7d32, #388e3c);
+    .logo { font-size: 28px; margin-bottom: 15px; }
+    .tagline { font-size: 18px; color: #ccc; margin-bottom: 25px; }
+    .btn {
+      background: linear-gradient(45deg, #00ff88, #00cc6a);
       color: white;
       border: none;
-      border-radius: 15px;
-      cursor: pointer;
-      box-shadow: 0 0 20px rgba(46, 125, 50, 0.4);
-      transition: all 0.3s ease;
-      width: 100%;
-      max-width: 350px;
-      display: block;
-      font-weight: bold;
-    }
-    .cta-button:hover {
-      background: linear-gradient(45deg, #388e3c, #43a047);
-      transform: translateY(-2px);
-    }
-    .cta-button:active {
-      transform: scale(0.98);
-    }
-    .trust-card, .features {
-      margin-top: 30px;
-      width: 100%;
-    }
-    .trust-card {
-      background: rgba(255, 193, 7, 0.1);
-      padding: 25px;
-      border-radius: 15px;
-      border: 1px solid rgba(255, 193, 7, 0.3);
-    }
-    .trust-card div {
-      margin: 12px 0;
-      color: #fff3c4;
-      font-size: 20px;
-    }
-    .features h2 {
-      font-size: 24px;
-      margin-bottom: 15px;
-      color: #4fc3f7;
-    }
-    .features ul {
-      list-style: none;
-      padding: 0;
-      font-size: 20px;
-    }
-    .features li {
-      margin: 12px 0;
-      color: #cfd8dc;
-      line-height: 1.5;
-    }
-    .disclaimer {
-      margin-top: 30px;
-      padding: 20px;
-      font-size: 16px;
-      color: #ffcdd2;
-      text-align: center;
-      line-height: 1.5;
-      background: rgba(244, 67, 54, 0.1);
+      padding: 15px 25px;
+      font-size: 18px;
       border-radius: 10px;
-      border: 1px solid rgba(244, 67, 54, 0.3);
-    }
-    .highlight {
-      color: #4fc3f7;
+      cursor: pointer;
+      width: 100%;
       font-weight: bold;
+    }
+    .btn:hover { background: linear-gradient(45deg, #00cc6a, #00ff88); }
+    .features { font-size: 16px; color: #ddd; line-height: 1.8; }
+    .disclaimer {
+      font-size: 12px;
+      color: #ff9999;
+      margin-top: 20px;
+      padding: 15px;
+      background: rgba(255,0,0,0.1);
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="main-wrapper">
-    <!-- Educational Testimonials in Hindi -->
-    <div class="testimonial-container">
-      <div class="testimonial-track">
-        <div class="testimonial-item">"Bhai saab, <span class="highlight">trading</span> sikhaane ka tarika kamaal hai! Risk management samjha diya." – Rahul, Mumbai</div>
-        <div class="testimonial-item">"Yaar ye <span class="highlight">trading</span> channel ekdam solid hai, Hindi mein sab clear explain karta hai." – Tushar, Delhi</div>
-        <div class="testimonial-item">"Boss, <span class="highlight">trading</span> ke basics itne ache se sikhaye ki confidence aa gaya." – Mohit, Bangalore</div>
+  <div class="container">
+    <div class="card">
+      <div class="logo">📈 <span class="trading">Trading</span> Hindi Hub</div>
+      <div class="tagline">Best <span class="trading">Trading</span> Education in Hindi</div>
+      <button class="btn" onclick="window.open('https://t.me/+NdSFIroeTMs5ZTQ1', '_blank')">
+        🚀 Join <span class="trading">Trading</span> Group
+      </button>
+    </div>
+
+    <div class="card">
+      <div class="features">
+        📊 <span class="trading">Trading</span> Signals<br>
+        🎓 <span class="trading">Trading</span> Education<br>
+        🛡️ Risk Management<br>
+        💬 Hindi Support
       </div>
     </div>
 
-    <div class="center-card">
-      <div class="logo">📈 <span class="highlight">Trading</span> Masterclass Hindi</div>
-      <div class="tagline">🔥 Best <span class="highlight">Trading</span> Channel for Hindi Signals | 🎯 Pure Educational <span class="highlight">Trading</span> Content</div>
-      <button class="cta-button" id="joinButton">🚀 Join <span class="highlight">Trading</span> Learning Group</button>
-    </div>
-
-    <div class="trust-card">
-      <div>✅ Hindi <span class="highlight">Trading</span> Education - Bilkul Clear</div>
-      <div>🎓 <span class="highlight">Trading</span> Strategies in Simple Language</div>
-      <div>📚 Complete <span class="highlight">Trading</span> Course Materials</div>
-    </div>
-
-    <div class="features">
-      <h2>🎯 <span class="highlight">Trading</span> Mein Kya Sikhoge</h2>
-      <ul>
-        <li>📊 <span class="highlight">Trading</span> Chart Analysis Hindi Mein</li>
-        <li>🛡️ Risk Management for Safe <span class="highlight">Trading</span></li>
-        <li>💡 <span class="highlight">Trading</span> Psychology & Mindset</li>
-        <li>🎯 Live <span class="highlight">Trading</span> Sessions</li>
-        <li>📱 <span class="highlight">Trading</span> Signals with Explanation</li>
-        <li>🤝 <span class="highlight">Trading</span> Community Support</li>
-      </ul>
-    </div>
-
     <div class="disclaimer">
-      <strong>⚠️ Important <span class="highlight">Trading</span> Disclaimer:</strong><br>
-      <span class="highlight">Trading</span> involves high risk of financial loss. Past <span class="highlight">trading</span> performance does not guarantee future results. This is purely educational <span class="highlight">trading</span> content and not financial advice. Please do <span class="highlight">trading</span> responsibly with money you can afford to lose. Learn <span class="highlight">trading</span> properly before investing real money.
-      <br><br>
-      यह केवल <span class="highlight">trading</span> की शिक्षा के लिए है, financial advice नहीं है।
+      <strong>⚠️ Risk Warning:</strong> <span class="trading">Trading</span> involves risk of loss. Educational content only.
     </div>
   </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('joinButton').onclick = function() {
-        // Proper redirect to Telegram group
-        window.open('https://t.me/+NdSFIroeTMs5ZTQ1', '_blank');
-      };
-    });
-  </script>
 </body>
 </html>
