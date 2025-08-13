@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trading Hub Hindi</title>
+  <title>Color Trading Hub Hindi</title>
   <style>
     * { box-sizing: border-box; }
     body {
@@ -22,7 +22,18 @@
       max-width: 400px;
       width: 100%;
     }
-    .trading { color: #00ff88; font-weight: bold; }
+    .color-trading { 
+      background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: bold;
+      animation: colorShift 3s ease-in-out infinite;
+    }
+    @keyframes colorShift {
+      0%, 100% { filter: hue-rotate(0deg); }
+      50% { filter: hue-rotate(90deg); }
+    }
     .card {
       background: rgba(255,255,255,0.1);
       padding: 30px;
@@ -33,7 +44,7 @@
     .logo { font-size: 28px; margin-bottom: 15px; }
     .tagline { font-size: 18px; color: #ccc; margin-bottom: 25px; }
     .btn {
-      background: linear-gradient(45deg, #00ff88, #00cc6a);
+      background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
       color: white;
       border: none;
       padding: 15px 25px;
@@ -42,8 +53,13 @@
       cursor: pointer;
       width: 100%;
       font-weight: bold;
+      animation: buttonGlow 2s ease-in-out infinite;
     }
-    .btn:hover { background: linear-gradient(45deg, #00cc6a, #00ff88); }
+    @keyframes buttonGlow {
+      0%, 100% { box-shadow: 0 0 10px rgba(255,107,107,0.5); }
+      50% { box-shadow: 0 0 20px rgba(78,205,196,0.7); }
+    }
+    .btn:hover { transform: scale(1.05); }
     .features { font-size: 16px; color: #ddd; line-height: 1.8; }
     .disclaimer {
       font-size: 12px;
@@ -58,24 +74,24 @@
 <body>
   <div class="container">
     <div class="card">
-      <div class="logo">📈 <span class="trading">Trading</span> Hindi Hub</div>
-      <div class="tagline">Best <span class="trading">Trading</span> Education in Hindi</div>
+      <div class="logo">📈 <span class="color-trading">Color Trading</span> Hindi Hub</div>
+      <div class="tagline">Best <span class="color-trading">Color Trading</span> Education in Hindi</div>
       <button class="btn" onclick="window.open('https://t.me/+NdSFIroeTMs5ZTQ1', '_blank')">
-        🚀 Join <span class="trading">Trading</span> Group
+        🚀 Join Now
       </button>
     </div>
 
     <div class="card">
       <div class="features">
-        📊 <span class="trading">Trading</span> Signals<br>
-        🎓 <span class="trading">Trading</span> Education<br>
+        📊 <span class="color-trading">Color Trading</span> Signals<br>
+        🎓 <span class="color-trading">Color Trading</span> Education<br>
         🛡️ Risk Management<br>
         💬 Hindi Support
       </div>
     </div>
 
     <div class="disclaimer">
-      <strong>⚠️ Risk Warning:</strong> <span class="trading">Trading</span> involves risk of loss. Educational content only.
+      <strong>⚠️ Risk Warning:</strong> <span class="color-trading">Color Trading</span> involves risk of loss. Educational content only.
     </div>
   </div>
 </body>
