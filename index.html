@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Tashan Sureshot</title>
+  <title>Trading Seekho - Best Hindi Trading Channel</title>
   <style>
     * { 
       box-sizing: border-box; 
@@ -13,7 +13,7 @@
       margin: 0;
       padding: 20px;
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+      background: linear-gradient(135deg, #0d1421, #1a2332);
       color: white;
       text-align: center;
       overflow-x: hidden;
@@ -33,7 +33,6 @@
       justify-content: center;
     }
     
-    /* Horizontal Slider Styles */
     .testimonial-container {
       width: 100%;
       margin-bottom: 30px;
@@ -59,12 +58,12 @@
       width: 95%;
       flex-shrink: 0;
       padding: 20px;
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(46, 125, 50, 0.1);
       border-radius: 15px;
       font-size: 18px;
-      color: #fff;
+      color: #e8f5e8;
       box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid rgba(76, 175, 80, 0.3);
       height: 100%;
       display: flex;
       align-items: center;
@@ -76,68 +75,65 @@
     
     .center-card {
       width: 100%;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(33, 150, 243, 0.1);
       padding: 30px;
       border-radius: 20px;
       margin-bottom: 30px;
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid rgba(33, 150, 243, 0.3);
     }
     .logo {
       font-size: 32px;
       font-weight: bold;
-      color: #fff;
+      color: #4fc3f7;
       margin-bottom: 10px;
     }
     .tagline {
       font-size: 20px;
-      color: #ccc;
+      color: #b3e5fc;
       line-height: 1.4;
     }
     .cta-button {
       margin: 25px auto 20px;
       padding: 18px 30px;
       font-size: 22px;
-      background: #f00;
+      background: linear-gradient(45deg, #2e7d32, #388e3c);
       color: white;
       border: none;
       border-radius: 15px;
       cursor: pointer;
-      box-shadow: 0 0 20px #f00;
-      transition: background 0.3s;
+      box-shadow: 0 0 20px rgba(46, 125, 50, 0.4);
+      transition: all 0.3s ease;
       width: 100%;
       max-width: 350px;
       display: block;
       font-weight: bold;
     }
+    .cta-button:hover {
+      background: linear-gradient(45deg, #388e3c, #43a047);
+      transform: translateY(-2px);
+    }
     .cta-button:active {
-      background: #cc0000;
       transform: scale(0.98);
     }
-    .redirect-timer {
-      font-size: 22px;
-      color: #ff0;
-      margin: 20px 0;
-      font-weight: bold;
-      text-shadow: 0 0 8px #ff0;
-    }
-    .trust-card, .features, .live-counter {
+    .trust-card, .features {
       margin-top: 30px;
       width: 100%;
     }
     .trust-card {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 193, 7, 0.1);
       padding: 25px;
       border-radius: 15px;
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid rgba(255, 193, 7, 0.3);
     }
     .trust-card div {
       margin: 12px 0;
-      color: #ffe58f;
+      color: #fff3c4;
       font-size: 20px;
     }
     .features h2 {
       font-size: 24px;
       margin-bottom: 15px;
+      color: #4fc3f7;
     }
     .features ul {
       list-style: none;
@@ -146,191 +142,76 @@
     }
     .features li {
       margin: 12px 0;
-      color: #ccc;
+      color: #cfd8dc;
       line-height: 1.5;
     }
-    .exit-popup {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(0, 0, 0, 0.95);
-      color: #fff;
-      padding: 30px;
-      border-radius: 20px;
-      border: 2px solid #f00;
-      box-shadow: 0 0 25px #f00;
-      display: none;
-      z-index: 1000;
-      width: 90%;
-      max-width: 400px;
-      font-size: 20px;
+    .disclaimer {
+      margin-top: 30px;
+      padding: 20px;
+      font-size: 16px;
+      color: #ffcdd2;
       text-align: center;
+      line-height: 1.5;
+      background: rgba(244, 67, 54, 0.1);
+      border-radius: 10px;
+      border: 1px solid rgba(244, 67, 54, 0.3);
     }
-    .exit-popup h3 {
-      margin-top: 0;
-      font-size: 24px;
-      color: #ffe58f;
-    }
-    .exit-popup button {
-      margin-top: 20px;
-      padding: 15px 25px;
-      background: #f00;
-      color: #fff;
-      border: none;
-      border-radius: 12px;
-      font-size: 20px;
-      cursor: pointer;
-      width: 100%;
-      font-weight: bold;
-    }
-    .live-counter {
-      font-size: 20px;
-      color: #0f0;
-      text-shadow: 0 0 10px #0f0;
-      text-align: center;
-      margin-bottom: 30px;
+    .highlight {
+      color: #4fc3f7;
       font-weight: bold;
     }
   </style>
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2103124876764950');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2103124876764950&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 </head>
 <body>
   <div class="main-wrapper">
-    <!-- Horizontal Testimonial Slider -->
+    <!-- Educational Testimonials in Hindi -->
     <div class="testimonial-container">
       <div class="testimonial-track">
-        <div class="testimonial-item">"Bhai ne 4,500 ka win karaya kal! 💥 Best tips ever!" – Rahul, Mumbai</div>
-        <div class="testimonial-item">"Free tip me bhi 1,200 ka profit! 😎 Ab to VIP join karunga" – Tushar, Delhi</div>
-        <div class="testimonial-item">"VIP leke toh life set hai bhai! 🔥 25K profit this month" – Mohit, Bangalore</div>
+        <div class="testimonial-item">"Bhai saab, <span class="highlight">trading</span> sikhaane ka tarika kamaal hai! Risk management samjha diya." – Rahul, Mumbai</div>
+        <div class="testimonial-item">"Yaar ye <span class="highlight">trading</span> channel ekdam solid hai, Hindi mein sab clear explain karta hai." – Tushar, Delhi</div>
+        <div class="testimonial-item">"Boss, <span class="highlight">trading</span> ke basics itne ache se sikhaye ki confidence aa gaya." – Mohit, Bangalore</div>
       </div>
     </div>
 
     <div class="center-card">
-      <div class="logo">🎯 Tashan Sureshot</div>
-      <div class="tagline">💯 Daily sureshot tips | 💸 Haar gaye toh paisa wapis</div>
-      <button class="cta-button" id="joinButton">👉 Join Telegram Channel Now</button>
-      <div class="redirect-timer" id="redirectTimer">Auto redirect in: 10 seconds</div>
+      <div class="logo">📈 <span class="highlight">Trading</span> Masterclass Hindi</div>
+      <div class="tagline">🔥 Best <span class="highlight">Trading</span> Channel for Hindi Signals | 🎯 Pure Educational <span class="highlight">Trading</span> Content</div>
+      <button class="cta-button" id="joinButton">🚀 Join <span class="highlight">Trading</span> Learning Group</button>
     </div>
 
     <div class="trust-card">
-      <div>✅ 98% Sahi Predictions</div>
-      <div>💸 20 Lakh+ Withdrawals Har Mahine</div>
-      <div>🔁 100% Paisa Wapis Agar Loss Hua</div>
+      <div>✅ Hindi <span class="highlight">Trading</span> Education - Bilkul Clear</div>
+      <div>🎓 <span class="highlight">Trading</span> Strategies in Simple Language</div>
+      <div>📚 Complete <span class="highlight">Trading</span> Course Materials</div>
     </div>
 
     <div class="features">
-      <h2>🚀 Kya Milega?</h2>
+      <h2>🎯 <span class="highlight">Trading</span> Mein Kya Sikhoge</h2>
       <ul>
-        <li>🎯 Roz ke Sureshot Colour Tips</li>
-        <li>🔒 VIP Group ka Access</li>
-        <li>💰 Haar gaye toh paisa wapis</li>
-        <li>📞 Personal Support WhatsApp pe</li>
-        <li>🎁 Special Bonuses for VIP Members</li>
+        <li>📊 <span class="highlight">Trading</span> Chart Analysis Hindi Mein</li>
+        <li>🛡️ Risk Management for Safe <span class="highlight">Trading</span></li>
+        <li>💡 <span class="highlight">Trading</span> Psychology & Mindset</li>
+        <li>🎯 Live <span class="highlight">Trading</span> Sessions</li>
+        <li>📱 <span class="highlight">Trading</span> Signals with Explanation</li>
+        <li>🤝 <span class="highlight">Trading</span> Community Support</li>
       </ul>
     </div>
 
-    
-
-    <div class="live-counter" id="liveUsers">🔴 182 log abhi online hai</div>
+    <div class="disclaimer">
+      <strong>⚠️ Important <span class="highlight">Trading</span> Disclaimer:</strong><br>
+      <span class="highlight">Trading</span> involves high risk of financial loss. Past <span class="highlight">trading</span> performance does not guarantee future results. This is purely educational <span class="highlight">trading</span> content and not financial advice. Please do <span class="highlight">trading</span> responsibly with money you can afford to lose. Learn <span class="highlight">trading</span> properly before investing real money.
+      <br><br>
+      यह केवल <span class="highlight">trading</span> की शिक्षा के लिए है, financial advice नहीं है।
+    </div>
   </div>
 
   <script>
-    const TELEGRAM_LINK = "https://t.me/+NdSFIroeTMs5ZTQ1";
-    
     document.addEventListener('DOMContentLoaded', function() {
-      // Set all links
       document.getElementById('joinButton').onclick = function() {
-        window.location.href = TELEGRAM_LINK;
+        // Proper redirect to Telegram group
+        window.open('https://t.me/+NdSFIroeTMs5ZTQ1', '_blank');
       };
-      document.getElementById('popupJoinButton').onclick = function() {
-        window.location.href = TELEGRAM_LINK;
-      };
-      
-      // 10 second redirect timer
-      let timeLeft = 10;
-      const redirectTimer = document.getElementById('redirectTimer');
-      const timerInterval = setInterval(function() {
-        timeLeft--;
-        redirectTimer.textContent = `Auto redirect in: ${timeLeft} seconds`;
-        
-        if (timeLeft <= 0) {
-          clearInterval(timerInterval);
-          window.location.href = TELEGRAM_LINK;
-        }
-      }, 1000);
-      
-      // Exit intent popup
-      let exitPopupShown = false;
-      let mouseY = 0;
-      
-      document.addEventListener('mouseout', function(e) {
-        if (!exitPopupShown && e.clientY < 0) {
-          showExitPopup();
-        }
-      });
-      
-      document.addEventListener('touchstart', function(e) {
-        mouseY = e.touches[0].clientY;
-      });
-      
-      document.addEventListener('touchmove', function(e) {
-        if (!exitPopupShown && e.touches[0].clientY - mouseY > 100) {
-          showExitPopup();
-        }
-      });
-      
-      function showExitPopup() {
-        document.getElementById('exitPopup').style.display = 'block';
-        exitPopupShown = true;
-        
-        setTimeout(function() {
-          if (document.getElementById('exitPopup').style.display === 'block') {
-            document.getElementById('exitPopup').style.display = 'none';
-          }
-        }, 15000);
-      }
-
-      // Fake live user count
-      let liveUsers = 182;
-      const userElement = document.getElementById('liveUsers');
-      
-      setInterval(() => {
-        let change = Math.floor(Math.random() * 8) * (Math.random() > 0.5 ? 1 : -1);
-        liveUsers = Math.max(160, liveUsers + change);
-        userElement.innerText = `🔴 ${liveUsers} log abhi online hai`;
-      }, 5000);
-      
-      // Pause animations when tab is not active
-      document.addEventListener('visibilitychange', function() {
-        const track = document.querySelector('.testimonial-track');
-        if (document.hidden) {
-          track.style.animationPlayState = 'paused';
-          clearInterval(timerInterval);
-        } else {
-          track.style.animationPlayState = 'running';
-        }
-      });
     });
   </script>
 </body>
 </html>
-
-
-
