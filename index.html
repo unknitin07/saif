@@ -1,214 +1,224 @@
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 
+<title>Color Trading Hindi</title>
+
 <style>
+
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-  background:#07090f;
-  font-family:'Inter',sans-serif;
+background:#07090f;
+font-family:'Inter',sans-serif;
 }
 
 /* ROOT */
 .ct-root{
-  width:100%;
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:12px;
+width:100%;
+min-height:100vh;
+padding:12px;
 }
 
 /* CARD */
 .ct-card{
-  width:100%;
-  max-width:420px;
-  background:#0e1423;
-  border-radius:22px;
-  border:1px solid rgba(255,255,255,0.06);
-  overflow:hidden;
+width:100%;
+background:#0e1423;
+border-radius:24px;
+border:1px solid rgba(255,255,255,0.06);
+overflow:hidden;
 }
 
 /* HEADER */
 .ct-header{
-  padding:28px 18px 22px;
-  text-align:center;
-  background:linear-gradient(160deg,#0c1a3a,#130a28);
+padding:36px 20px 28px;
+text-align:center;
+background:linear-gradient(160deg,#0c1a3a,#130a28);
 }
 
 /* AVATAR */
 .ct-avatar-wrap{
-  position:relative;
-  display:inline-block;
-  margin-bottom:14px;
+position:relative;
+display:inline-block;
+margin-bottom:18px;
 }
 
 .ct-glow{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(129,140,248,0.4),transparent);
-  animation:pulse 2s infinite;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:160px;
+height:160px;
+border-radius:50%;
+background:radial-gradient(circle,rgba(129,140,248,0.4),transparent);
+animation:pulse 2s infinite;
 }
 
 @keyframes pulse{
-  0%{opacity:.6; transform:translate(-50%,-50%) scale(1);}
-  50%{opacity:1; transform:translate(-50%,-50%) scale(1.08);}
-  100%{opacity:.6; transform:translate(-50%,-50%) scale(1);}
+0%{opacity:.6; transform:translate(-50%,-50%) scale(1);}
+50%{opacity:1; transform:translate(-50%,-50%) scale(1.1);}
+100%{opacity:.6; transform:translate(-50%,-50%) scale(1);}
 }
 
 .ct-avatar{
-  width:80px;
-  height:80px;
-  border-radius:50%;
-  border:3px solid #818cf8;
-  position:relative;
-  z-index:2;
+width:110px;
+height:110px;
+border-radius:50%;
+border:4px solid #818cf8;
+position:relative;
+z-index:2;
 }
 
 .ct-dot{
-  position:absolute;
-  bottom:2px;
-  right:2px;
-  width:14px;
-  height:14px;
-  background:#22c55e;
-  border-radius:50%;
-  border:2px solid #0e1423;
-  z-index:3;
+position:absolute;
+bottom:6px;
+right:6px;
+width:18px;
+height:18px;
+background:#22c55e;
+border-radius:50%;
+border:3px solid #0e1423;
+z-index:3;
 }
 
 /* BRAND */
 .ct-brand{
-  font-family:'Poppins',sans-serif;
-  font-size:22px;
-  font-weight:700;
-  background:linear-gradient(90deg,#818cf8,#c084fc,#38bdf8);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  margin-top:6px;
+font-family:'Poppins';
+font-size:28px;
+font-weight:800;
+background:linear-gradient(90deg,#818cf8,#c084fc,#38bdf8);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-top:10px;
 }
 
 .ct-sub{
-  font-size:12px;
-  color:rgba(255,255,255,0.5);
-  margin-top:4px;
+font-size:14px;
+color:rgba(255,255,255,0.6);
+margin-top:6px;
 }
 
 /* STATS */
 .ct-stats{
-  display:flex;
-  justify-content:space-between;
-  margin-top:16px;
-  padding:0 10px;
+display:flex;
+justify-content:space-between;
+margin-top:22px;
 }
 
 .ct-stat{
-  text-align:center;
-  flex:1;
+flex:1;
+text-align:center;
 }
 
 .ct-stat-num{
-  color:#a5b4fc;
-  font-weight:600;
-  font-size:14px;
+color:#a5b4fc;
+font-weight:700;
+font-size:18px;
 }
 
 .ct-stat-label{
-  font-size:10px;
-  color:rgba(255,255,255,0.4);
+font-size:12px;
+color:rgba(255,255,255,0.45);
 }
 
 /* CTA */
 .ct-cta-section{
-  padding:18px;
+padding:22px;
 }
 
 .ct-cta{
-  width:100%;
-  background:linear-gradient(135deg,#4f46e5,#7c3aed);
-  color:white;
-  padding:14px;
-  border-radius:12px;
-  text-decoration:none;
-  font-family:'Poppins';
-  font-weight:600;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:8px;
-  box-shadow:0 0 20px rgba(99,102,241,0.3);
+width:100%;
+background:linear-gradient(135deg,#4f46e5,#7c3aed);
+color:white;
+padding:18px;
+border-radius:16px;
+text-decoration:none;
+font-family:'Poppins';
+font-weight:700;
+font-size:18px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+box-shadow:0 0 30px rgba(99,102,241,0.4);
 }
 
 /* FEATURES */
 .ct-features{
-  padding:0 18px 18px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
+padding:0 20px 20px;
+display:flex;
+flex-direction:column;
+gap:14px;
 }
 
 .ct-feature{
-  display:flex;
-  gap:12px;
-  padding:12px;
-  background:rgba(255,255,255,0.03);
-  border-radius:12px;
-  border:1px solid rgba(255,255,255,0.05);
+display:flex;
+gap:14px;
+padding:16px;
+background:rgba(255,255,255,0.03);
+border-radius:14px;
+border:1px solid rgba(255,255,255,0.06);
 }
 
 .ct-icon{
-  width:34px;
-  height:34px;
-  border-radius:8px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:rgba(129,140,248,0.15);
+width:42px;
+height:42px;
+border-radius:10px;
+display:flex;
+justify-content:center;
+align-items:center;
+background:rgba(129,140,248,0.15);
 }
 
 .ct-icon span{
-  font-size:18px;
-  color:#818cf8;
+font-size:22px;
+color:#818cf8;
 }
 
 .ct-feature-title{
-  font-size:13px;
-  font-weight:600;
-  color:white;
+font-size:15px;
+font-weight:600;
+color:white;
 }
 
 .ct-feature-desc{
-  font-size:11px;
-  color:rgba(255,255,255,0.4);
+font-size:13px;
+color:rgba(255,255,255,0.5);
 }
 
 /* DISCLAIMER */
 .ct-disclaimer{
-  margin:0 18px 18px;
-  padding:10px;
-  background:rgba(239,68,68,0.06);
-  border-radius:10px;
-  border:1px solid rgba(239,68,68,0.15);
-  font-size:11px;
-  color:rgba(255,255,255,0.4);
-  display:flex;
-  gap:6px;
+margin:0 20px 20px;
+padding:14px;
+background:rgba(239,68,68,0.06);
+border-radius:12px;
+border:1px solid rgba(239,68,68,0.15);
+font-size:13px;
+color:rgba(255,255,255,0.5);
+display:flex;
+gap:8px;
 }
 
 .ct-disclaimer span{
-  color:#f87171;
-  font-size:14px;
+color:#f87171;
+font-size:16px;
 }
+
 </style>
+</head>
+
+<body>
 
 <div class="ct-root">
 
@@ -226,6 +236,7 @@ body{
 <div class="ct-sub">Best Color Trading Education Platform in Hindi</div>
 
 <div class="ct-stats">
+
 <div class="ct-stat">
 <div class="ct-stat-num">10K+</div>
 <div class="ct-stat-label">Members</div>
@@ -240,8 +251,8 @@ body{
 <div class="ct-stat-num">Free</div>
 <div class="ct-stat-label">Education</div>
 </div>
-</div>
 
+</div>
 </div>
 
 <div class="ct-cta-section">
@@ -279,7 +290,7 @@ Join Telegram Channel
 </div>
 <div>
 <div class="ct-feature-title">Risk Management</div>
-<div class="ct-feature-desc">Protect your capital</div>
+<div class="ct-feature-desc">Protect your capital effectively</div>
 </div>
 </div>
 
@@ -304,3 +315,6 @@ Risk Warning: Color trading involves financial risk. Trade responsibly.
 
 </div>
 </div>
+
+</body>
+</html>
