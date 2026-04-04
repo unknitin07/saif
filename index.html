@@ -1,273 +1,306 @@
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-.ct-root {
-  font-family: 'Inter', sans-serif;
-  background: #0a0f1e;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 16px;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
-.ct-card {
-  background: #111827;
-  border-radius: 24px;
-  border: 1px solid rgba(255,255,255,0.08);
-  max-width: 400px;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+
+body{
+  background:#07090f;
+  font-family:'Inter',sans-serif;
 }
-.ct-header {
-  background: linear-gradient(135deg, #0f1f45 0%, #1a0a2e 100%);
-  padding: 24px 24px 20px;
-  text-align: center;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  position: relative;
+
+/* ROOT */
+.ct-root{
+  width:100%;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:12px;
 }
-.ct-header::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(ellipse at 50% -20%, rgba(99,102,241,0.25) 0%, transparent 70%);
-  pointer-events: none;
+
+/* CARD */
+.ct-card{
+  width:100%;
+  max-width:420px;
+  background:#0e1423;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,0.06);
+  overflow:hidden;
 }
-.ct-avatar-wrap {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 12px;
+
+/* HEADER */
+.ct-header{
+  padding:28px 18px 22px;
+  text-align:center;
+  background:linear-gradient(160deg,#0c1a3a,#130a28);
 }
-.ct-avatar {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid rgba(99,102,241,0.6);
-  display: block;
+
+/* AVATAR */
+.ct-avatar-wrap{
+  position:relative;
+  display:inline-block;
+  margin-bottom:14px;
 }
-.ct-dot {
-  position: absolute;
-  bottom: 2px;
-  right: 2px;
-  background: #22c55e;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: 3px solid #111827;
+
+.ct-glow{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(129,140,248,0.4),transparent);
+  animation:pulse 2s infinite;
 }
-.ct-brand {
-  font-family: 'Poppins', sans-serif;
-  font-size: 22px;
-  font-weight: 800;
-  background: linear-gradient(90deg, #818cf8, #c084fc, #38bdf8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1.2;
-  margin-bottom: 4px;
+
+@keyframes pulse{
+  0%{opacity:.6; transform:translate(-50%,-50%) scale(1);}
+  50%{opacity:1; transform:translate(-50%,-50%) scale(1.08);}
+  100%{opacity:.6; transform:translate(-50%,-50%) scale(1);}
 }
-.ct-sub {
-  font-size: 12px;
-  color: rgba(255,255,255,0.4);
-  letter-spacing: 0.4px;
+
+.ct-avatar{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  border:3px solid #818cf8;
+  position:relative;
+  z-index:2;
 }
-.ct-stats {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 14px;
+
+.ct-dot{
+  position:absolute;
+  bottom:2px;
+  right:2px;
+  width:14px;
+  height:14px;
+  background:#22c55e;
+  border-radius:50%;
+  border:2px solid #0e1423;
+  z-index:3;
 }
-.ct-stat { text-align: center; }
-.ct-stat-num {
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: #a5b4fc;
+
+/* BRAND */
+.ct-brand{
+  font-family:'Poppins',sans-serif;
+  font-size:22px;
+  font-weight:700;
+  background:linear-gradient(90deg,#818cf8,#c084fc,#38bdf8);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-top:6px;
 }
-.ct-stat-label {
-  font-size: 10px;
-  color: rgba(255,255,255,0.3);
-  margin-top: 1px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+
+.ct-sub{
+  font-size:12px;
+  color:rgba(255,255,255,0.5);
+  margin-top:4px;
 }
-.ct-divider {
-  width: 1px;
-  height: 28px;
-  background: rgba(255,255,255,0.08);
-  align-self: center;
+
+/* STATS */
+.ct-stats{
+  display:flex;
+  justify-content:space-between;
+  margin-top:16px;
+  padding:0 10px;
 }
-.ct-body {
-  padding: 16px 20px;
+
+.ct-stat{
+  text-align:center;
+  flex:1;
 }
-.ct-features {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+
+.ct-stat-num{
+  color:#a5b4fc;
+  font-weight:600;
+  font-size:14px;
 }
-.ct-feature {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 12px;
-  background: rgba(255,255,255,0.03);
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.05);
+
+.ct-stat-label{
+  font-size:10px;
+  color:rgba(255,255,255,0.4);
 }
-.ct-icon-wrap {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+
+/* CTA */
+.ct-cta-section{
+  padding:18px;
 }
-.ct-icon-wrap.indigo { background: rgba(99,102,241,0.15); }
-.ct-icon-wrap.purple { background: rgba(168,85,247,0.15); }
-.ct-icon-wrap.cyan { background: rgba(6,182,212,0.15); }
-.ct-icon-wrap.green { background: rgba(34,197,94,0.15); }
-.ct-icon-wrap span { font-size: 16px; }
-.ct-icon-wrap.indigo span { color: #818cf8; }
-.ct-icon-wrap.purple span { color: #c084fc; }
-.ct-icon-wrap.cyan span { color: #22d3ee; }
-.ct-icon-wrap.green span { color: #4ade80; }
-.ct-feature-title {
-  font-size: 13px;
-  font-weight: 600;
-  color: rgba(255,255,255,0.85);
-  margin-bottom: 1px;
+
+.ct-cta{
+  width:100%;
+  background:linear-gradient(135deg,#4f46e5,#7c3aed);
+  color:white;
+  padding:14px;
+  border-radius:12px;
+  text-decoration:none;
+  font-family:'Poppins';
+  font-weight:600;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  box-shadow:0 0 20px rgba(99,102,241,0.3);
 }
-.ct-feature-desc {
-  font-size: 11px;
-  color: rgba(255,255,255,0.35);
+
+/* FEATURES */
+.ct-features{
+  padding:0 18px 18px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
 }
-.ct-cta-wrap {
-  padding: 0 20px 12px;
+
+.ct-feature{
+  display:flex;
+  gap:12px;
+  padding:12px;
+  background:rgba(255,255,255,0.03);
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.05);
 }
-.ct-cta {
-  display: flex;
-  width: 100%;
-  padding: 14px;
-  background: linear-gradient(135deg, #4f46e5, #7c3aed);
-  color: white;
-  border: none;
-  border-radius: 14px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
-  text-decoration: none;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  transition: opacity 0.2s;
+
+.ct-icon{
+  width:34px;
+  height:34px;
+  border-radius:8px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:rgba(129,140,248,0.15);
 }
-.ct-cta:hover { opacity: 0.88; }
-.ct-cta span.material-icons-round { font-size: 18px; }
-.ct-disclaimer {
-  margin: 0 20px 20px;
-  display: flex;
-  align-items: flex-start;
-  gap: 7px;
-  padding: 10px 12px;
-  background: rgba(239,68,68,0.07);
-  border-radius: 10px;
-  border: 1px solid rgba(239,68,68,0.12);
+
+.ct-icon span{
+  font-size:18px;
+  color:#818cf8;
 }
-.ct-disclaimer span.material-icons-round {
-  font-size: 14px;
-  color: #f87171;
-  flex-shrink: 0;
-  margin-top: 1px;
+
+.ct-feature-title{
+  font-size:13px;
+  font-weight:600;
+  color:white;
 }
-.ct-disclaimer-text {
-  font-size: 11px;
-  color: rgba(255,255,255,0.38);
-  line-height: 1.55;
+
+.ct-feature-desc{
+  font-size:11px;
+  color:rgba(255,255,255,0.4);
 }
-.ct-disclaimer-text strong { color: #f87171; font-weight: 600; }
+
+/* DISCLAIMER */
+.ct-disclaimer{
+  margin:0 18px 18px;
+  padding:10px;
+  background:rgba(239,68,68,0.06);
+  border-radius:10px;
+  border:1px solid rgba(239,68,68,0.15);
+  font-size:11px;
+  color:rgba(255,255,255,0.4);
+  display:flex;
+  gap:6px;
+}
+
+.ct-disclaimer span{
+  color:#f87171;
+  font-size:14px;
+}
 </style>
 
 <div class="ct-root">
-  <div class="ct-card">
 
-    <div class="ct-header">
-      <div class="ct-avatar-wrap">
-        <img class="ct-avatar" src="https://i.ibb.co/Q31JS5DZ/photo-2026-04-05-00-51-39.jpg" alt="Profile">
-        <div class="ct-dot"></div>
-      </div>
-      <div class="ct-brand">Color Trading Hindi</div>
-      <div class="ct-sub">Best Color Trading Education Platform in Hindi</div>
-      <div class="ct-stats">
-        <div class="ct-stat">
-          <div class="ct-stat-num">10K+</div>
-          <div class="ct-stat-label">Members</div>
-        </div>
-        <div class="ct-divider"></div>
-        <div class="ct-stat">
-          <div class="ct-stat-num">Daily</div>
-          <div class="ct-stat-label">Signals</div>
-        </div>
-        <div class="ct-divider"></div>
-        <div class="ct-stat">
-          <div class="ct-stat-num">Free</div>
-          <div class="ct-stat-label">Education</div>
-        </div>
-      </div>
-    </div>
+<div class="ct-card">
 
-    <div class="ct-body">
-      <div class="ct-features">
-        <div class="ct-feature">
-          <div class="ct-icon-wrap indigo"><span class="material-icons-round">bar_chart</span></div>
-          <div>
-            <div class="ct-feature-title">Live Trading Signals</div>
-            <div class="ct-feature-desc">Real-time color trading alerts & analysis</div>
-          </div>
-        </div>
-        <div class="ct-feature">
-          <div class="ct-icon-wrap purple"><span class="material-icons-round">school</span></div>
-          <div>
-            <div class="ct-feature-title">Hindi Education</div>
-            <div class="ct-feature-desc">Step-by-step trading tutorials in Hindi</div>
-          </div>
-        </div>
-        <div class="ct-feature">
-          <div class="ct-icon-wrap cyan"><span class="material-icons-round">security</span></div>
-          <div>
-            <div class="ct-feature-title">Risk Management</div>
-            <div class="ct-feature-desc">Learn to protect your capital effectively</div>
-          </div>
-        </div>
-        <div class="ct-feature">
-          <div class="ct-icon-wrap green"><span class="material-icons-round">support_agent</span></div>
-          <div>
-            <div class="ct-feature-title">24/7 Community Support</div>
-            <div class="ct-feature-desc">Active Telegram group with expert guidance</div>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="ct-header">
 
-    <div class="ct-cta-wrap">
-      <a class="ct-cta" href="https://t.me/+NdSFIroeTMs5ZTQ1" target="_blank">
-        <span class="material-icons-round">send</span>
-        Join Telegram Channel
-      </a>
-    </div>
+<div class="ct-avatar-wrap">
+<div class="ct-glow"></div>
+<img class="ct-avatar" src="https://i.ibb.co/Q31JS5DZ/photo-2026-04-05-00-51-39.jpg">
+<div class="ct-dot"></div>
+</div>
 
-    <div class="ct-disclaimer">
-      <span class="material-icons-round">warning_amber</span>
-      <div class="ct-disclaimer-text">
-        <strong>Risk Warning:</strong> Color trading involves significant risk of financial loss. All content is for educational purposes only. Trade responsibly.
-      </div>
-    </div>
+<div class="ct-brand">Color Trading Hindi</div>
+<div class="ct-sub">Best Color Trading Education Platform in Hindi</div>
 
-  </div>
+<div class="ct-stats">
+<div class="ct-stat">
+<div class="ct-stat-num">10K+</div>
+<div class="ct-stat-label">Members</div>
+</div>
+
+<div class="ct-stat">
+<div class="ct-stat-num">Daily</div>
+<div class="ct-stat-label">Signals</div>
+</div>
+
+<div class="ct-stat">
+<div class="ct-stat-num">Free</div>
+<div class="ct-stat-label">Education</div>
+</div>
+</div>
+
+</div>
+
+<div class="ct-cta-section">
+<a class="ct-cta" href="https://t.me/+NdSFIroeTMs5ZTQ1">
+<span class="material-icons-round">send</span>
+Join Telegram Channel
+</a>
+</div>
+
+<div class="ct-features">
+
+<div class="ct-feature">
+<div class="ct-icon">
+<span class="material-icons-round">bar_chart</span>
+</div>
+<div>
+<div class="ct-feature-title">Live Trading Signals</div>
+<div class="ct-feature-desc">Real-time alerts & analysis</div>
+</div>
+</div>
+
+<div class="ct-feature">
+<div class="ct-icon">
+<span class="material-icons-round">school</span>
+</div>
+<div>
+<div class="ct-feature-title">Hindi Education</div>
+<div class="ct-feature-desc">Tutorials in Hindi language</div>
+</div>
+</div>
+
+<div class="ct-feature">
+<div class="ct-icon">
+<span class="material-icons-round">security</span>
+</div>
+<div>
+<div class="ct-feature-title">Risk Management</div>
+<div class="ct-feature-desc">Protect your capital</div>
+</div>
+</div>
+
+<div class="ct-feature">
+<div class="ct-icon">
+<span class="material-icons-round">support_agent</span>
+</div>
+<div>
+<div class="ct-feature-title">24/7 Support</div>
+<div class="ct-feature-desc">Expert guidance anytime</div>
+</div>
+</div>
+
+</div>
+
+<div class="ct-disclaimer">
+<span class="material-icons-round">warning_amber</span>
+<div>
+Risk Warning: Color trading involves financial risk. Trade responsibly.
+</div>
+</div>
+
+</div>
 </div>
