@@ -25,23 +25,27 @@ font-family:'Inter',sans-serif;
 
 /* ROOT */
 .ct-root{
-width:100%;
 min-height:100vh;
-padding:12px;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:18px;
 }
 
 /* CARD */
 .ct-card{
 width:100%;
+max-width:480px;
 background:#0e1423;
 border-radius:24px;
 border:1px solid rgba(255,255,255,0.06);
 overflow:hidden;
+box-shadow:0 0 40px rgba(0,0,0,0.5);
 }
 
 /* HEADER */
 .ct-header{
-padding:36px 20px 28px;
+padding:32px 20px 24px;
 text-align:center;
 background:linear-gradient(160deg,#0c1a3a,#130a28);
 }
@@ -50,7 +54,7 @@ background:linear-gradient(160deg,#0c1a3a,#130a28);
 .ct-avatar-wrap{
 position:relative;
 display:inline-block;
-margin-bottom:18px;
+margin-bottom:16px;
 }
 
 .ct-glow{
@@ -58,62 +62,60 @@ position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-width:160px;
-height:160px;
+width:140px;
+height:140px;
 border-radius:50%;
-background:radial-gradient(circle,rgba(129,140,248,0.4),transparent);
+background:radial-gradient(circle,rgba(129,140,248,0.35),transparent);
 animation:pulse 2s infinite;
 }
 
 @keyframes pulse{
 0%{opacity:.6; transform:translate(-50%,-50%) scale(1);}
-50%{opacity:1; transform:translate(-50%,-50%) scale(1.1);}
+50%{opacity:1; transform:translate(-50%,-50%) scale(1.07);}
 100%{opacity:.6; transform:translate(-50%,-50%) scale(1);}
 }
 
 .ct-avatar{
-width:110px;
-height:110px;
+width:95px;
+height:95px;
 border-radius:50%;
-border:4px solid #818cf8;
+border:3px solid #818cf8;
 position:relative;
 z-index:2;
 }
 
 .ct-dot{
 position:absolute;
-bottom:6px;
-right:6px;
-width:18px;
-height:18px;
+bottom:4px;
+right:4px;
+width:16px;
+height:16px;
 background:#22c55e;
 border-radius:50%;
 border:3px solid #0e1423;
-z-index:3;
 }
 
 /* BRAND */
 .ct-brand{
 font-family:'Poppins';
-font-size:28px;
+font-size:24px;
 font-weight:800;
 background:linear-gradient(90deg,#818cf8,#c084fc,#38bdf8);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-margin-top:10px;
 }
 
 .ct-sub{
-font-size:14px;
-color:rgba(255,255,255,0.6);
-margin-top:6px;
+font-size:13px;
+color:rgba(255,255,255,0.55);
+margin-top:5px;
 }
 
 /* STATS */
 .ct-stats{
 display:flex;
 justify-content:space-between;
-margin-top:22px;
+margin-top:18px;
 }
 
 .ct-stat{
@@ -124,56 +126,56 @@ text-align:center;
 .ct-stat-num{
 color:#a5b4fc;
 font-weight:700;
-font-size:18px;
+font-size:16px;
 }
 
 .ct-stat-label{
-font-size:12px;
+font-size:11px;
 color:rgba(255,255,255,0.45);
 }
 
 /* CTA */
 .ct-cta-section{
-padding:22px;
+padding:18px;
 }
 
 .ct-cta{
 width:100%;
 background:linear-gradient(135deg,#4f46e5,#7c3aed);
 color:white;
-padding:18px;
-border-radius:16px;
+padding:16px;
+border-radius:14px;
 text-decoration:none;
 font-family:'Poppins';
 font-weight:700;
-font-size:18px;
+font-size:16px;
 display:flex;
 justify-content:center;
 align-items:center;
-gap:10px;
-box-shadow:0 0 30px rgba(99,102,241,0.4);
+gap:8px;
+box-shadow:0 0 25px rgba(99,102,241,0.4);
 }
 
 /* FEATURES */
 .ct-features{
-padding:0 20px 20px;
+padding:0 18px 18px;
 display:flex;
 flex-direction:column;
-gap:14px;
+gap:12px;
 }
 
 .ct-feature{
 display:flex;
-gap:14px;
-padding:16px;
+gap:12px;
+padding:14px;
 background:rgba(255,255,255,0.03);
-border-radius:14px;
-border:1px solid rgba(255,255,255,0.06);
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.05);
 }
 
 .ct-icon{
-width:42px;
-height:42px;
+width:38px;
+height:38px;
 border-radius:10px;
 display:flex;
 justify-content:center;
@@ -182,29 +184,29 @@ background:rgba(129,140,248,0.15);
 }
 
 .ct-icon span{
-font-size:22px;
+font-size:20px;
 color:#818cf8;
 }
 
 .ct-feature-title{
-font-size:15px;
+font-size:14px;
 font-weight:600;
 color:white;
 }
 
 .ct-feature-desc{
-font-size:13px;
+font-size:12px;
 color:rgba(255,255,255,0.5);
 }
 
 /* DISCLAIMER */
 .ct-disclaimer{
-margin:0 20px 20px;
-padding:14px;
+margin:0 18px 18px;
+padding:12px;
 background:rgba(239,68,68,0.06);
 border-radius:12px;
 border:1px solid rgba(239,68,68,0.15);
-font-size:13px;
+font-size:12px;
 color:rgba(255,255,255,0.5);
 display:flex;
 gap:8px;
@@ -212,7 +214,7 @@ gap:8px;
 
 .ct-disclaimer span{
 color:#f87171;
-font-size:16px;
+font-size:15px;
 }
 
 </style>
@@ -236,7 +238,6 @@ font-size:16px;
 <div class="ct-sub">Best Color Trading Education Platform in Hindi</div>
 
 <div class="ct-stats">
-
 <div class="ct-stat">
 <div class="ct-stat-num">10K+</div>
 <div class="ct-stat-label">Members</div>
@@ -251,8 +252,8 @@ font-size:16px;
 <div class="ct-stat-num">Free</div>
 <div class="ct-stat-label">Education</div>
 </div>
-
 </div>
+
 </div>
 
 <div class="ct-cta-section">
