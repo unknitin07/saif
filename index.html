@@ -1,99 +1,273 @@
-<!DOCTYPE html>
-<html lang="hi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Color Trading Hub</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      padding: 20px;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #1a1a2e, #16213e);
-      color: white;
-      text-align: center;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .container {
-      max-width: 400px;
-      width: 100%;
-    }
-    .color-trading { 
-      background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      font-weight: bold;
-      animation: colorShift 3s ease-in-out infinite;
-    }
-    @keyframes colorShift {
-      0%, 100% { filter: hue-rotate(0deg); }
-      50% { filter: hue-rotate(90deg); }
-    }
-    .card {
-      background: rgba(255,255,255,0.1);
-      padding: 30px;
-      border-radius: 20px;
-      margin: 20px 0;
-      border: 1px solid rgba(255,255,255,0.2);
-    }
-    .logo { font-size: 28px; margin-bottom: 15px; }
-    .tagline { font-size: 18px; color: #ccc; margin-bottom: 25px; }
-    .btn {
-      background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-      color: white;
-      border: none;
-      padding: 15px 25px;
-      font-size: 18px;
-      border-radius: 10px;
-      cursor: pointer;
-      width: 100%;
-      font-weight: bold;
-      animation: buttonGlow 2s ease-in-out infinite;
-    }
-    @keyframes buttonGlow {
-      0%, 100% { box-shadow: 0 0 10px rgba(255,107,107,0.5); }
-      50% { box-shadow: 0 0 20px rgba(78,205,196,0.7); }
-    }
-    .btn:hover { transform: scale(1.05); }
-    .features { font-size: 16px; color: #ddd; line-height: 1.8; }
-    .disclaimer {
-      font-size: 12px;
-      color: #ff9999;
-      margin-top: 20px;
-      padding: 15px;
-      background: rgba(255,0,0,0.1);
-      border-radius: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="card">
-      <div class="logo">📈 <span class="color-trading">Color Trading</span> Hindi</div>
-      <div class="tagline">Best <span class="color-trading">Color Trading</span> Education in Hindi</div>
-      <button class="btn" onclick="window.open('https://t.me/+1gQKISi-E15iYWU1', '_blank')">
-        🚀 Join Now
-      </button>
-    </div>
 
-    <div class="card">
-      <div class="features">
-        📊 <span class="color-trading">Color Trading</span> Signals<br>
-        🎓 <span class="color-trading">Color Trading</span> Education<br>
-        🛡️ Risk Management<br>
-        💬 Hindi Support
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+.ct-root {
+  font-family: 'Inter', sans-serif;
+  background: #0a0f1e;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+}
+.ct-card {
+  background: #111827;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+  max-width: 400px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.ct-header {
+  background: linear-gradient(135deg, #0f1f45 0%, #1a0a2e 100%);
+  padding: 24px 24px 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  position: relative;
+}
+.ct-header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(ellipse at 50% -20%, rgba(99,102,241,0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+.ct-avatar-wrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.ct-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(99,102,241,0.6);
+  display: block;
+}
+.ct-dot {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  background: #22c55e;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 3px solid #111827;
+}
+.ct-brand {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #818cf8, #c084fc, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.ct-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.4px;
+}
+.ct-stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 14px;
+}
+.ct-stat { text-align: center; }
+.ct-stat-num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #a5b4fc;
+}
+.ct-stat-label {
+  font-size: 10px;
+  color: rgba(255,255,255,0.3);
+  margin-top: 1px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.ct-divider {
+  width: 1px;
+  height: 28px;
+  background: rgba(255,255,255,0.08);
+  align-self: center;
+}
+.ct-body {
+  padding: 16px 20px;
+}
+.ct-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ct-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+.ct-icon-wrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.ct-icon-wrap.indigo { background: rgba(99,102,241,0.15); }
+.ct-icon-wrap.purple { background: rgba(168,85,247,0.15); }
+.ct-icon-wrap.cyan { background: rgba(6,182,212,0.15); }
+.ct-icon-wrap.green { background: rgba(34,197,94,0.15); }
+.ct-icon-wrap span { font-size: 16px; }
+.ct-icon-wrap.indigo span { color: #818cf8; }
+.ct-icon-wrap.purple span { color: #c084fc; }
+.ct-icon-wrap.cyan span { color: #22d3ee; }
+.ct-icon-wrap.green span { color: #4ade80; }
+.ct-feature-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 1px;
+}
+.ct-feature-desc {
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+}
+.ct-cta-wrap {
+  padding: 0 20px 12px;
+}
+.ct-cta {
+  display: flex;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+}
+.ct-cta:hover { opacity: 0.88; }
+.ct-cta span.material-icons-round { font-size: 18px; }
+.ct-disclaimer {
+  margin: 0 20px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  padding: 10px 12px;
+  background: rgba(239,68,68,0.07);
+  border-radius: 10px;
+  border: 1px solid rgba(239,68,68,0.12);
+}
+.ct-disclaimer span.material-icons-round {
+  font-size: 14px;
+  color: #f87171;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.ct-disclaimer-text {
+  font-size: 11px;
+  color: rgba(255,255,255,0.38);
+  line-height: 1.55;
+}
+.ct-disclaimer-text strong { color: #f87171; font-weight: 600; }
+</style>
+
+<div class="ct-root">
+  <div class="ct-card">
+
+    <div class="ct-header">
+      <div class="ct-avatar-wrap">
+        <img class="ct-avatar" src="https://i.ibb.co/Q31JS5DZ/photo-2026-04-05-00-51-39.jpg" alt="Profile">
+        <div class="ct-dot"></div>
+      </div>
+      <div class="ct-brand">Color Trading Hindi</div>
+      <div class="ct-sub">Best Color Trading Education Platform in Hindi</div>
+      <div class="ct-stats">
+        <div class="ct-stat">
+          <div class="ct-stat-num">10K+</div>
+          <div class="ct-stat-label">Members</div>
+        </div>
+        <div class="ct-divider"></div>
+        <div class="ct-stat">
+          <div class="ct-stat-num">Daily</div>
+          <div class="ct-stat-label">Signals</div>
+        </div>
+        <div class="ct-divider"></div>
+        <div class="ct-stat">
+          <div class="ct-stat-num">Free</div>
+          <div class="ct-stat-label">Education</div>
+        </div>
       </div>
     </div>
 
-    <div class="disclaimer">
-      <strong>⚠️ Risk Warning:</strong> <span class="color-trading">Color Trading</span> involves risk of loss. Educational content only.
+    <div class="ct-body">
+      <div class="ct-features">
+        <div class="ct-feature">
+          <div class="ct-icon-wrap indigo"><span class="material-icons-round">bar_chart</span></div>
+          <div>
+            <div class="ct-feature-title">Live Trading Signals</div>
+            <div class="ct-feature-desc">Real-time color trading alerts & analysis</div>
+          </div>
+        </div>
+        <div class="ct-feature">
+          <div class="ct-icon-wrap purple"><span class="material-icons-round">school</span></div>
+          <div>
+            <div class="ct-feature-title">Hindi Education</div>
+            <div class="ct-feature-desc">Step-by-step trading tutorials in Hindi</div>
+          </div>
+        </div>
+        <div class="ct-feature">
+          <div class="ct-icon-wrap cyan"><span class="material-icons-round">security</span></div>
+          <div>
+            <div class="ct-feature-title">Risk Management</div>
+            <div class="ct-feature-desc">Learn to protect your capital effectively</div>
+          </div>
+        </div>
+        <div class="ct-feature">
+          <div class="ct-icon-wrap green"><span class="material-icons-round">support_agent</span></div>
+          <div>
+            <div class="ct-feature-title">24/7 Community Support</div>
+            <div class="ct-feature-desc">Active Telegram group with expert guidance</div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</body>
-</html>
 
+    <div class="ct-cta-wrap">
+      <a class="ct-cta" href="https://t.me/+NdSFIroeTMs5ZTQ1" target="_blank">
+        <span class="material-icons-round">send</span>
+        Join Telegram Channel
+      </a>
+    </div>
+
+    <div class="ct-disclaimer">
+      <span class="material-icons-round">warning_amber</span>
+      <div class="ct-disclaimer-text">
+        <strong>Risk Warning:</strong> Color trading involves significant risk of financial loss. All content is for educational purposes only. Trade responsibly.
+      </div>
+    </div>
+
+  </div>
+</div>
